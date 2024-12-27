@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -18,7 +11,7 @@ source ${HOMEBREW_PREFIX}/share/antigen/antigen.zsh
 antigen use oh-my-zsh
 
 # THEME
-antigen theme robbyrussell
+# antigen theme robbyrussell
 # antigen theme romkatv/powerlevel10k
 
 # ANTIGEN BUNDLES
@@ -30,6 +23,9 @@ antigen apply
 
 if command -v rbenv &>/dev/null; then
   eval "$(rbenv init - zsh)"
+fi
+if command -v starship &>/dev/null; then
+  eval "$(starship init zsh)"
 fi
 export RAILS_ENV=development
 export LDFLAGS="-L/opt/homebrew/opt/openblas/lib"
@@ -134,8 +130,5 @@ source $ZSH/oh-my-zsh.sh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 source <(fzf --zsh)
