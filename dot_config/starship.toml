@@ -8,6 +8,7 @@ $git_status\
 $cmd_duration\
 $line_break\
 $python\
+$ruby\
 $character"""
 
 [directory]
@@ -43,4 +44,8 @@ style = "yellow"
 
 [python]
 format = "[$virtualenv]($style) "
+style = "bright-black"
+
+[ruby]
+format = "[$symbol]($style) "
 style = "bright-black"
