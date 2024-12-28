@@ -11,6 +11,11 @@ $python\
 $ruby\
 $character"""
 
+#format = '''
+#[┌───────────────────>](bold green)
+#[│](bold green)$directory$rust$package
+#[└─>](bold green) '''
+
 [directory]
 style = "blue"
 
@@ -48,5 +53,5 @@ style = "bright-black"
 
 [ruby]
 detect_variables = []
-format = "[$symbol$version]($style) "
-style = "bright-black"
+format = "[$symbol]($style) "
+style = "bright-red"
