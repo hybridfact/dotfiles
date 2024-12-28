@@ -47,5 +47,6 @@ format = "[$virtualenv]($style) "
 style = "bright-black"
 
 [ruby]
-format = "[$symbol]($style) "
+detect_variables = []
+format = "[$symbol$version]($style) "
 style = "bright-black"
