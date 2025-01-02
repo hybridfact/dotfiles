@@ -53,5 +53,5 @@ style = "bright-black"
 
 [ruby]
 detect_variables = []
-format = "[$symbol]($style) "
+format = "[$symbol]($style)"
 style = "bright-red"
