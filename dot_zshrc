@@ -12,7 +12,7 @@ antigen use oh-my-zsh
 
 # THEME
 # antigen theme robbyrussell
-# antigen theme romkatv/powerlevel10k
+antigen theme romkatv/powerlevel10k
 
 # ANTIGEN BUNDLES
 antigen bundle zsh-users/zsh-completions
@@ -24,9 +24,9 @@ antigen apply
 if command -v rbenv &>/dev/null; then
   eval "$(rbenv init - zsh)"
 fi
-if command -v starship &>/dev/null; then
-  eval "$(starship init zsh)"
-fi
+# if command -v starship &>/dev/null; then
+#   eval "$(starship init zsh)"
+# fi
 export RAILS_ENV=development
 export LDFLAGS="-L/opt/homebrew/opt/openblas/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/openblas/include"
