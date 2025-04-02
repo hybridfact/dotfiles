@@ -35,9 +35,12 @@ fi
 #   eval "$(starship init zsh)"
 # fi
 export RAILS_ENV=development
-export LDFLAGS="-L/opt/homebrew/opt/openblas/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/openblas/include"
+export LDFLAGS="-L/opt/homebrew/opt/zlib/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/zlib/include"
 export EDITOR=nvim
+
+# For pkg-config to find zlib you may need to set:
+export PKG_CONFIG_PATH="/opt/homebrew/opt/zlib/lib/pkgconfig"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -135,15 +138,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
 if command -v fzf &>/dev/null; then
   source <(fzf --zsh)
 fi
 
 if command -v zoxide &>/dev/null; then
   eval "$(zoxide init zsh)"
+fi
+
+if command -v ~/.local/bin/mise &>/dev/null; then
+  eval "$(~/.local/bin/mise activate)"
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
