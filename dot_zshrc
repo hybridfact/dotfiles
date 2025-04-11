@@ -29,9 +29,9 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 # END ANTIGEN
 
-if command -v rbenv &>/dev/null; then
-  eval "$(rbenv init - zsh)"
-fi
+# if command -v rbenv &>/dev/null; then
+#   eval "$(rbenv init - zsh)"
+# fi
 # if command -v starship &>/dev/null; then
 #   eval "$(starship init zsh)"
 # fi
@@ -149,6 +149,10 @@ fi
 
 if command -v ~/.local/bin/mise &>/dev/null; then
   eval "$(~/.local/bin/mise activate)"
+fi
+
+if command -v /opt/homebrew/bin/mise &>/dev/null; then
+  eval "$(/opt/homebrew/bin/mise activate)"
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
