@@ -155,5 +155,10 @@ if command -v /opt/homebrew/bin/mise &>/dev/null; then
   eval "$(/opt/homebrew/bin/mise activate)"
 fi
 
+# Added by Windsurf
+export PATH="/Users/benjaminolson/.codeium/windsurf/bin:$PATH"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
